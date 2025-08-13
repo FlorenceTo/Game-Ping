@@ -3,7 +3,7 @@ let xPos = 400; // Intial horizontal position of the falling circle
 let yPos = 0; // Initial vertical position (starts at top)
 let speed = 5; // Speed at which the circle falls
 let score = 0; // Starting score
-let misses = 0; // initializes the misses variable setting it to 0 so the program can begin counting how many times the ball is missed.
+let misses = 0; // initializes the misses variable setting it to 0 so the program can begin counting how many times acthe ball is missed.
 
 let hitOsc; // Oscillator for hit sound
 
@@ -11,6 +11,8 @@ let confetti = []; // For storing celebration emoji positions
 
 function setup() {
   createCanvas(800, 800);
+  let canvas = createCanvas(800, 800);
+canvas.parent(document.body); // Ensures it stays centered with our CSS
 
   // Create a second oscillator for the hit sound
   hitOsc = new p5.Oscillator("triangle");
