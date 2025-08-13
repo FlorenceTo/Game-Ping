@@ -31,7 +31,7 @@ canvas.parent(document.body); // Ensures it stays centered with our CSS
 }
 
 function draw() {
-  background(255, 255, 255); // Light gray background
+  background(255, 255, 255); //
 
   // Draw and move the falling circle
   noStroke(); // Remove outline
@@ -95,5 +95,9 @@ function draw() {
 
 // Required for activating audio in some browsers
 function mousePressed() {
-  userStartAudio(); // Enable audio context on user interaction
+  userStartAudio(); // Unlock the audio context
+  hitOsc.start();   // Start the oscillator now
+  hitOsc.freq(300);
+  hitOsc.amp(0.5, 0.05); // Small ping on click
+  hitOsc.amp(0, 0.2);    // Fade out
 }
