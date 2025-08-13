@@ -31,7 +31,7 @@ canvas.parent(document.body); // Ensures it stays centered with our CSS
 }
 
 function draw() {
-  background(220); // Light gray background
+  background(255, 255, 255); // Light gray background
 
   // Draw and move the falling circle
   noStroke(); // Remove outline
